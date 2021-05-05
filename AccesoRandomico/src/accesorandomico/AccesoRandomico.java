@@ -12,6 +12,7 @@ package accesorandomico;
 public class AccesoRandomico {
     
     //COMENTARIO DE PRUEBA.... BY: JACK :D
+    //COMENTARIO DE PRUEBA.... BY: ALAN :3
     /**
      * @param args the command line arguments
      */
