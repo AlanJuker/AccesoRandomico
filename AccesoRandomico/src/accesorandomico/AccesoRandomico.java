@@ -10,7 +10,8 @@ package accesorandomico;
  * @author bryan
  */
 public class AccesoRandomico {
-
+    
+    //COMENTARIO DE PRUEBA.... BY: JACK :D
     /**
      * @param args the command line arguments
      */
