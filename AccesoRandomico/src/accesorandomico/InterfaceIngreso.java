@@ -103,10 +103,10 @@ public class InterfaceIngreso extends javax.swing.JFrame {
         clave = Integer.parseInt(jTextField1.getText());
         nombre = jTextField2.getText();
         edad = Integer.parseInt(jTextField3.getText());
-        if(nombre.length() < 25){
+        if(nombre.length() > 25){
             JOptionPane.showMessageDialog(this, "EL NOMBRE DEBE SER MENOR DE 25 CARACTERES");
         }
-        else if(nombre.length()> 25){
+        else if(nombre.length()< 25){
             for(int i = 0; i<25-nombre.length(); i++){
                 nombre+=" ";
             }
