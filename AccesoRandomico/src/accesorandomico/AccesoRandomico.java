@@ -19,6 +19,8 @@ public class AccesoRandomico {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        InterfaceIngreso aux = new InterfaceIngreso();
+        aux.setVisible(true);
     }
     
 }
