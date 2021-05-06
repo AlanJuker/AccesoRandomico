@@ -5,6 +5,8 @@
  */
 package accesorandomico;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author bryan
@@ -95,13 +97,27 @@ public class InterfaceIngreso extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //INGRESO DE DATOS
         int clave, edad;
         String nombre;
         clave = Integer.parseInt(jTextField1.getText());
         nombre = jTextField2.getText();
         edad = Integer.parseInt(jTextField3.getText());
-        IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
-        ingreso1.grabarDatos();
+        if(nombre.length() < 25){
+            JOptionPane.showMessageDialog(this, "EL NOMBRE DEBE SER MENOR DE 25 CARACTERES");
+        }
+        else if(nombre.length()> 25){
+            for(int i = 0; i<25-nombre.length(); i++){
+                nombre+=" ";
+            }
+            IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
+            ingreso1.grabarDatos();
+        }else{
+            
+            IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
+            ingreso1.grabarDatos();
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
