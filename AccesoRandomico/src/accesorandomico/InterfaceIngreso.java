@@ -47,6 +47,11 @@ public class InterfaceIngreso extends javax.swing.JFrame {
         label3.setText("Ingrese una edad:");
 
         jButton1.setText("INGRESAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,6 +92,17 @@ public class InterfaceIngreso extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int clave, edad;
+        String nombre;
+        clave = Integer.parseInt(jTextField1.getText());
+        nombre = jTextField2.getText();
+        edad = Integer.parseInt(jTextField3.getText());
+        IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
+        ingreso1.grabarDatos();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
