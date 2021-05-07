@@ -99,30 +99,32 @@ public class InterfaceIngreso extends javax.swing.JFrame {
         // TODO add your handling code here:
         //INGRESO DE DATOS
         int clave, edad;
-        String nombre;
+        String nombre = "";
         clave = Integer.parseInt(jTextField1.getText());
-        nombre = jTextField2.getText();
+        nombre = jTextField2.getText().trim();
         edad = Integer.parseInt(jTextField3.getText());
-        if(nombre.length() > 25){
+        if (nombre.length() > 25) {
             JOptionPane.showMessageDialog(this, "EL NOMBRE DEBE SER MENOR DE 25 CARACTERES");
-        }
-        else if(nombre.length()< 25){
-            for(int i = 0; i<25-nombre.length(); i++){
-                nombre+=" ";
+        } else {
+            for (int i = nombre.length(); i < 25; i++) {
+               // for (int i = 0; i < (25 - nombre.length()); i++) //la longitud de nombre aumenta en cada bucle
+                {
+                    nombre += " ";
+                }
+
+                IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
+                ingreso1.grabarDatos();
+                JOptionPane.showMessageDialog(this, "USUARIO INGRESADO CORRECTAMENTE");
+                jTextField1.setText("");
+                jTextField2.setText("");
+                jTextField3.setText("");
             }
-            IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
-            ingreso1.grabarDatos();
-        }else{
-            
-            IngresoDP ingreso1 = new IngresoDP(clave, nombre, edad);
-            ingreso1.grabarDatos();
-        }
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
-     * @param args the command line arguments
-     */
+         * @param args the command line arguments
+         */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
