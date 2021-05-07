@@ -106,8 +106,7 @@ public class InterfaceIngreso extends javax.swing.JFrame {
         if (nombre.length() > 25) {
             JOptionPane.showMessageDialog(this, "EL NOMBRE DEBE SER MENOR DE 25 CARACTERES");
         } else {
-            for (int i = nombre.length(); i < 25; i++) {
-               // for (int i = 0; i < (25 - nombre.length()); i++) //la longitud de nombre aumenta en cada bucle
+            for (int i = nombre.length(); i < 25; i++) 
                 {
                     nombre += " ";
                 }
